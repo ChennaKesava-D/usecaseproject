@@ -3,7 +3,8 @@ const path = require('path');
 
 const app = express();
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));   // ← updated
+
 
 // --- In-memory "database" ---
 // Data lives only in this array. It resets whenever the server restarts.
